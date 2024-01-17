@@ -327,7 +327,7 @@ int Display()
                 if (customerAccount != nullptr)
                 {
 
-                    Database::showCustomerReservations(*customerAccount);
+                    ++(*customerAccount);
                 }
                 else
                 {
@@ -364,7 +364,7 @@ int Display()
                 break;
 
             case 5:
-                Database::showCustomerReservations(*customerAccount);
+                ++(*customerAccount);
                 break;
             case 6:
                 isLoggedIn = 0;

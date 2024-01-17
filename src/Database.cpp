@@ -333,28 +333,7 @@ int Database::updateCustomerInformation(const int id, const string &newName, con
     cout << "Customer information has been updated successfully!" << endl;
 }
 
-void Database::showCustomerReservations(const Customer &customer)
-{
-    cout << "Reservations for Customer: " << customer.getName() << " " << customer.getSurname() << endl
-         << endl;
 
-    for (const Reservation &reservation : reservations)
-    {
-        if (reservation.getCustomer()->getId() == customer.getId())
-        {
-            // Eğer rezervasyon müşteriye aitse, bilgilerini ekrana yazdır
-            cout << "Reservation ID: " << reservation.getReservationId() << endl;
-            cout << "Price: " << reservation.getPrice() << endl;
-            cout << "Purpose: " << reservation.getPurpose() << endl;
-            cout << "Date: " << reservation.getDate() << endl;
-            cout << "Hour: " << reservation.getHour() << endl;
-            cout << "Conference Hall Name : " << reservation.getConferenceHall().getHallName() << endl;
-            cout << "Reservation Status : " << Reservation::reservation_Status_Names[reservation.getStatus()] << endl;
-
-            cout << "--------------------------" << endl;
-        }
-    }
-}
 // Functions about Conference Hall
 void Database::displayAllConferenceHalls()
 {

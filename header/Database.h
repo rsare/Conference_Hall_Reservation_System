@@ -32,7 +32,6 @@ public:
     static int readCustomer();
     static int deleteCustomer(int customerId);
     static int updateCustomerInformation(const int id, const string &newName, const string &newSurname, const string &newPassword, const string &newUsername);
-    static void showCustomerReservations(const Customer &customer);
     static void setIdNumbers();
     // Functions about Conferenece Hall
     static void displayAllConferenceHalls();

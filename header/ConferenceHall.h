@@ -24,7 +24,7 @@ public:
     // Constructor
     ConferenceHall(int _id, const string &_hallName, int _hallCapacity, SaloonType _saloonType);
     ConferenceHall();
-    static unordered_map<SaloonType, string> sallon_Type_Names;
+    static unordered_map<SaloonType, string> sallon_Type_Names; //Enum'un ismini yazdırmak için kullanılan bir fonksiyon
     void displayInfo() const;
 
     // Getter and Setter functions
